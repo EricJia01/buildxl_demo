@@ -27,4 +27,6 @@ steps:
   persistCredentials: true  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
    
 - script: |
-    'bin/bxl.exe /c:config.bc /disableProcessRetryOnResourceExhaustion+'
+    cd 'D:\a\1\buildxl_Test'
+    dir
+    sh 'D:\a\1\buildxl_Test\bin\bxl.exe' '/c:config.bc /disableProcessRetryOnResourceExhaustion+'
