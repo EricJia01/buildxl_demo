@@ -5,9 +5,9 @@ config({
             root: d`.`,
             moduleName: "Project",
             // Leaving this line commented out makes the resolver find the MSBuild version and related assemblies to use under PATH:
-            msBuildSearchLocations: [
-			d`C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin`
-			]
+            //msBuildSearchLocations: [
+			//d`C:\Program Files\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin`
+			//]
         }
     ]
 });
