@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 
 - checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: true  # whether to fetch clean each time
+  clean: false  # whether to fetch clean each time
   fetchDepth: 2  # the depth of commits to ask Git to fetch
   lfs: true  # whether to download Git-LFS files
   submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
@@ -27,4 +27,7 @@ steps:
   persistCredentials: true  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
    
 - script: |
-    'D:\a\1\buildxl_Test\build.bat'
+    fsutil usn createjournal m=0x20000000 a=0x8000000 D:
+    cd 'D:\a\1\buildxl_Test'
+    dir
+    D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"
