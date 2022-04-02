@@ -1,0 +1,1 @@
+{"version":3,"file":"GraphSerializer.js","sourceRoot":"","sources":["../GraphSerializer.ts"],"names":[],"mappings":";;AACA,uBAA0B;AAE1B;;GAEG;AACH,SAAgB,cAAc,CAAC,KAAsB,EAAE,UAAkB;IACrE,IAAI,IAAI,GAAG,IAAI,CAAC,SAAS,CAAC,KAAK,EAAE,IAAI,EAAE,CAAC,CAAC,CAAC;IAC1C,EAAE,CAAC,aAAa,CAAC,UAAU,EAAE,IAAI,CAAC,CAAC;AACvC,CAAC;AAHD,wCAGC"}
