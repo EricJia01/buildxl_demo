@@ -1,1 +1,2 @@
-%BUILDXL_BIN%/bxl /c:config.bc /disableProcessRetryOnResourceExhaustion+
+cd /d %~dp0
+.\bin\bxl /c:config.bc /disableProcessRetryOnResourceExhaustion+
