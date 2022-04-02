@@ -29,4 +29,4 @@ steps:
 - script: |
     cd /d %~dp0
     dir
-    .\bin\bxl /c:config.bc /disableProcessRetryOnResourceExhaustion+
+    .\bin\bxl '/c:config.bc /disableProcessRetryOnResourceExhaustion+'
