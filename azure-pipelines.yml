@@ -25,6 +25,17 @@ steps:
   submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
   path: buildxl_Test  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
   persistCredentials: true  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
-   
+
+- task: DownloadPackage@1
+  displayName: Download BuildXL from Nuget
+  retryCountOnTaskFailure: 3
+  inputs:
+    packageType: 'nuget'
+    feed: Minecraft
+    definition: 'BuildXL.Minecraft.Spike'
+    version: '0.1.0-20220112.2.1'
+    extract: true
+    downloadPath: '$(System.ArtifactsDirectory)/BuildXL'
+
 - script: |
     'D:\a\1\buildxl_Test\build.bat'
