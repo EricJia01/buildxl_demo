@@ -26,4 +26,4 @@ steps:
   displayname: Enable Journaling for D drive
     
 - script: 'D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"'
-    displayname: Build with BuildXL
+  displayname: Build with BuildXL
