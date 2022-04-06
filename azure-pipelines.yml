@@ -23,7 +23,7 @@ steps:
   persistCredentials: true  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
    
 - script: 'C:\windows\system32\fsutil usn createjournal m=0x20000000 a=0x8000000 D:'
-  displayname: Enable Journaling for D drive
+  displayName: Enable Journaling for D drive
     
 - script: 'D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"'
-  displayname: Build with BuildXL
+  displayName: Build with BuildXL
