@@ -27,3 +27,6 @@ steps:
     
 - script: 'D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"'
   displayName: Build with BuildXL
+
+- script: 'D:\a\1\buildxl_Test\Debug\example.exe'
+  displayName: Run instance
