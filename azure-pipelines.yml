@@ -24,8 +24,8 @@ steps:
 #- script: 'C:\windows\system32\fsutil usn createjournal m=0x20000000 a=0x8000000 D:'
 #  displayName: Enable Journaling for D drive
     
-- script: 'D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"'
+- script: 'C:\dev\agent\_work\1\buildxl_Test\bin\bxl.exe "/c:C:\dev\agent\_work\1\buildxl_Test\config.bc"'
   displayName: Build with BuildXL
 
-- script: 'D:\a\1\buildxl_Test\Debug\example.exe'
+- script: 'C:\dev\agent\_work\1\buildxl_Test\Debug\example.exe'
   displayName: Run instance
