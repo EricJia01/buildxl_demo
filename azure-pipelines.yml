@@ -8,16 +8,12 @@ trigger:
 
 pool:
   vmImage: windows-latest
+  name: Azure Pipelines
+#  demands:
+#  - msbuild
+#  - visualstudio
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - checkout: self  # self represents the repo where the initial Pipelines YAML file was found
   clean: false  # whether to fetch clean each time
   fetchDepth: 2  # the depth of commits to ask Git to fetch
@@ -26,8 +22,11 @@ steps:
   path: buildxl_Test  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
   persistCredentials: true  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
    
-- script: |
-    fsutil usn createjournal m=0x20000000 a=0x8000000 D:
-    cd 'D:\a\1\buildxl_Test'
-    dir
-    D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"
+- script: 'C:\windows\system32\fsutil usn createjournal m=0x20000000 a=0x8000000 D:'
+  displayName: Enable Journaling for D drive
+    
+- script: 'D:\a\1\buildxl_Test\bin\bxl.exe "/c:D:\a\1\buildxl_Test\config.bc"'
+  displayName: Build with BuildXL
+
+- script: 'D:\a\1\buildxl_Test\Debug\example.exe'
+  displayName: Run instance
